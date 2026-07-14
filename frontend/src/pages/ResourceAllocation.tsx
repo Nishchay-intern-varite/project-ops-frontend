@@ -99,32 +99,32 @@ export default function ResourceAllocation() {
      {message && <Alert sx={{ mb: 2 }}>{message}</Alert>}
 <Paper sx={{ p: 3, mb: 3 }}>
 <Grid container spacing={2}>
-<Grid item xs={12} md={6}>
+<Grid size={{ xs: 12, md: 6 }}>
 <TextField fullWidth select label="Project" value={form.project_id} onChange={(e) => setForm({ ...form, project_id: e.target.value })}>
              {projects.map((p) => <MenuItem key={p.id} value={p.id}>{p.name}</MenuItem>)}
 </TextField>
 </Grid>
-<Grid item xs={12} md={6}>
+<Grid size={{ xs: 12, md: 6 }}>
 <TextField fullWidth select label="Resource" value={form.resource_id} onChange={(e) => setForm({ ...form, resource_id: e.target.value })}>
              {resources.map((r) => <MenuItem key={r.id} value={r.id}>{r.name}</MenuItem>)}
 </TextField>
 </Grid>
-<Grid item xs={12} md={6}>
+<Grid size={{ xs: 12, md: 6 }}>
 <TextField fullWidth type="date" label="Start Date" slotProps={{ inputLabel: { shrink: true } }} value={form.start_date} onChange={(e) => setForm({ ...form, start_date: e.target.value })} />
 </Grid>
-<Grid item xs={12} md={6}>
+<Grid size={{ xs: 12, md: 6 }}>
 <TextField fullWidth type="date" label="End Date" slotProps={{ inputLabel: { shrink: true } }} value={form.end_date} onChange={(e) => setForm({ ...form, end_date: e.target.value })} />
 </Grid>
-<Grid item xs={12} md={6}>
+<Grid size={{ xs: 12, md: 6 }}>
 <TextField fullWidth type="number" label="Allocation %" value={form.allocation_percentage} onChange={(e) => setForm({ ...form, allocation_percentage: e.target.value })} />
 </Grid>
-<Grid item xs={12} md={6}>
+<Grid size={{ xs: 12, md: 6 }}>
 <TextField fullWidth select label="Status" value={form.status} onChange={(e) => setForm({ ...form, status: e.target.value })}>
 <MenuItem value="Active">Active</MenuItem>
 <MenuItem value="Completed">Completed</MenuItem>
 </TextField>
 </Grid>
-<Grid item xs={12}>
+<Grid size={12}>
 <Button variant="contained" onClick={handleSubmit}>{editId ? 'Update Allocation' : 'Save Allocation'}</Button>
 </Grid>
 </Grid>
