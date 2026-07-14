@@ -87,11 +87,11 @@ const Reports = () => {
 <Button variant="contained" color="success" onClick={exportExcel}>Export Excel</Button>
 </div>
 <Grid container spacing={3}>
-<Grid item xs={12} md={3}><Card><CardContent><Typography>Projects</Typography><Typography variant="h4">{projects.length}</Typography></CardContent></Card></Grid>
-<Grid item xs={12} md={3}><Card><CardContent><Typography>Tasks</Typography><Typography variant="h4">{tasks.length}</Typography></CardContent></Card></Grid>
-<Grid item xs={12} md={3}><Card><CardContent><Typography>Resources</Typography><Typography variant="h4">{resources.length}</Typography></CardContent></Card></Grid>
-<Grid item xs={12} md={3}><Card><CardContent><Typography>Timesheets</Typography><Typography variant="h4">{timesheets.length}</Typography></CardContent></Card></Grid>
-<Grid item xs={12} md={3}><Card><CardContent><Typography>Allocations</Typography><Typography variant="h4">{allocations.length}</Typography></CardContent></Card></Grid>
+<Grid size={{ xs: 12, md: 3 }}><Card><CardContent><Typography>Projects</Typography><Typography variant="h4">{projects.length}</Typography></CardContent></Card></Grid>
+<Grid size={{ xs: 12, md: 3 }}><Card><CardContent><Typography>Tasks</Typography><Typography variant="h4">{tasks.length}</Typography></CardContent></Card></Grid>
+<Grid size={{ xs: 12, md: 3 }}><Card><CardContent><Typography>Resources</Typography><Typography variant="h4">{resources.length}</Typography></CardContent></Card></Grid>
+<Grid size={{ xs: 12, md: 3 }}><Card><CardContent><Typography>Timesheets</Typography><Typography variant="h4">{timesheets.length}</Typography></CardContent></Card></Grid>
+<Grid size={{ xs: 12, md: 3 }}><Card><CardContent><Typography>Allocations</Typography><Typography variant="h4">{allocations.length}</Typography></CardContent></Card></Grid>
 </Grid>
 <Typography variant="h5" sx={{ mt: 5, mb: 2 }}>Project Report</Typography>
 <TableContainer component={Paper}><Table>
