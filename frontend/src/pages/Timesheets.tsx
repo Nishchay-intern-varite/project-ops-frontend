@@ -115,19 +115,23 @@ function Timesheets() {
 >
          Add Timesheet
 </Button>
+
 <TextField
-         size="small"
-         placeholder="Search Employee..."
-         value={search}
-         onChange={(e) => setSearch(e.target.value)}
-         InputProps={{
-           startAdornment: (
-<InputAdornment position="start">
-<SearchIcon />
-</InputAdornment>
-           ),
-         }}
-       />
+  size="small"
+  placeholder="Search Employee..."
+  value={search}
+  onChange={(e) => setSearch(e.target.value)}
+  slotProps={{
+    input: {
+      startAdornment: (
+        <InputAdornment position="start">
+          <SearchIcon />
+        </InputAdornment>
+      ),
+    },
+  }}
+/>
+
 </div>
 <Paper>
 <Table>
@@ -213,16 +217,20 @@ function Timesheets() {
            }
          />
 <TextField
-           fullWidth
-           margin="normal"
-           type="date"
-           label="Work Date"
-           InputLabelProps={{ shrink: true }}
-           value={form.work_date}
-           onChange={(e) =>
-             setForm({ ...form, work_date: e.target.value })
-           }
-         />
+  fullWidth
+  margin="normal"
+  type="date"
+  label="Work Date"
+  slotProps={{
+    inputLabel: {
+      shrink: true,
+    },
+  }}
+  value={form.work_date}
+  onChange={(e) =>
+    setForm({ ...form, work_date: e.target.value })
+  }
+/>
 </DialogContent>
 <DialogActions>
 <Button onClick={() => setOpen(false)}>

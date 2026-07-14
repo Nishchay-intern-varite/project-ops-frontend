@@ -120,18 +120,20 @@ function Resources() {
          Add Resource
 </Button>
 <TextField
-         size="small"
-         placeholder="Search..."
-         value={search}
-         onChange={(e) => setSearch(e.target.value)}
-         InputProps={{
-           startAdornment: (
-<InputAdornment position="start">
-<SearchIcon />
-</InputAdornment>
-           ),
-         }}
-       />
+  size="small"
+  placeholder="Search..."
+  value={search}
+  onChange={(e) => setSearch(e.target.value)}
+  slotProps={{
+    input: {
+      startAdornment: (
+        <InputAdornment position="start">
+          <SearchIcon />
+        </InputAdornment>
+      ),
+    },
+  }}
+/>
 </div>
 <Paper>
 <Table>
