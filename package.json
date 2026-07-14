@@ -1,0 +1,19 @@
+{
+  "name": "project-ops",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev": "npm run dev:frontend & npm run dev:backend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@mui/icons-material": "^9.2.0",
+    "@mui/x-charts": "^9.8.0"
+  }
+}
